@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="PL">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Mariusz Najwer, Michał Chudy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="tic tac toe" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- <link rel="shortcut icon" href=""> -->
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="CSS/gameBoard.css" rel="stylesheet" />
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="JS/gameBoard.js"></script>
+
+    </head>
+
+    <body>
+        <section class="flexParentGame">
+            
+            <h1 class="k"><i class="fas fa-times"></i> Tic Tac Toe <i class="far fa-circle"></i></h1> 
+
+            <section class="inParamtrs">
+                
+                <form id="formGenerateGame">
+                    <div class="flexParentInputs"> 
+                        <div class="flexChildInputs">
+                            <div class="iconWithInput">
+                                <div class="icon-ph"><i class="fas fa-window-maximize"></i></div>
+                                <input required type="number" name="sizeGame" min="3" max="10" placeholder="Rozmiar planszy" onfocus="this.placeholder=''" onblur="this.placeholder='Rozmiar planszy'">
+                            </div>
+                        </div>
+
+                        <div class="flexChildInputs">
+                            <div class="iconWithInput">
+                                <div class="icon-ph"><i class="fab fa-optin-monster"></i></div>
+                                <input required type="number" name="strikeOff" min="3" max="10" placeholder="Liczba skreśleń" onfocus="this.placeholder=''" onblur="this.placeholder='Liczba skreśleń'">
+                            </div>
+                        </div>
+
+                        <div class="flexChildInputs">
+                            <button type="submit" class="btn wave">Generuj!</button>
+                        </div> 
+                    </div>
+                </form>
+
+                <div class="error" id="error">
+                    <i class="fas fa-exclamation-triangle"></i> Liczba skreśleń nie może być większa, niż rozmiar planszy!
+                </div>
+                
+                <div class="infoFromGame" id="infoFromGameForm">
+
+                </div>
+
+            </section>
+            
+            <section class="gameBoard">
+                <div class="flexParentGameBoard" id="boardGame">
+                    <!-- <div class="flexChildGameBoard"><i class="fas fa-times"></i></div>
+                    <div class="flexChildGameBoard"><i class="far fa-circle"></i></div> -->
+                </div>
+            </section>
+
+            <div class="infoFromGameA">
+                <p>Player 1 wygrał jupi!</p>
+                <p>Player 2 przegrał, kupuje pączki!</p>
+            </div>
+
+        </section> 
+    </body>
+</html>
